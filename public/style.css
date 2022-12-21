@@ -1,0 +1,147 @@
+/*Code Created by Manpreet Kaur Sidhu*/
+
+.div1 {
+    background-color: #cfcfcf;
+}
+.div2 {
+    border: 0px solid black;
+    height: 400px;
+    width: 100%;
+    background-color: #cfcfcf;
+    
+}
+
+.div3{
+    border: 0px solid black;
+    margin-left:100px;
+    height: 370px;
+    width: 500px;
+   display:inline-block;
+   margin-left:150px;
+
+}
+.div4 {
+    border: 0px solid red;
+    height: 300px;
+    width: 100%;
+    background-image: url('Image2.jpg');
+   background-size:100% 130%;
+
+}
+
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+.table1 {
+    border:0px solid red;
+   margin-left:5%;
+   width:80%;
+  
+}
+th {
+ 
+    background-color: darkslategrey;
+    padding-left: 50px;
+    font-size: 20px;
+    color:white;
+   
+}
+
+td {
+    padding-left: 40px;
+    font-size: 15px;
+}
+
+
+.img2 {
+    height: 200px;
+    width: 300px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left:20%;
+}
+
+
+
+.login-page {
+    width: 400px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+    .login-page .form .login {
+        margin-top: -31px;
+        margin-bottom: 30px;
+    }
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+}
+
+    .form input {
+        font-family: "Roboto", sans-serif;
+        border: 0;
+        background: #f2f2f2;
+        width: 90%;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .form button {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background-color: #328f8a;
+        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+        width: 90%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 15px;
+    }
+
+    .form .message {
+        margin: 15px 0 0;
+        color: #b3b3b3;
+        font-size: 12px;
+    }
+
+.h2 {
+   font-style:Italic;
+   text-align:center;
+   color:#6082B6;
+}

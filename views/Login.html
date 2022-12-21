@@ -1,0 +1,41 @@
+<!--Code Created by Manpreet Sidhu-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Booking Page</title>
+        <style>
+            body {
+            
+                background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+                font-family: "Roboto", sans-serif;
+           
+            }
+        </style>
+    </head>
+    <body class="body1">
+        <ul>
+            <li><a class="active" href="Contact">Contact</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="VacationPackage">Packages</a></li>
+            <li><a href="travelabout.html">About</a></li>
+            <li><a href="Index.html">Home</a></li>
+            <li><a style="margin-right:58vw">Travel Agency</a></li>
+        </ul>
+        <div class="login-page">
+            <div class="form">
+                <div class="login">
+                    <div class="login-header">
+                        <h3>Book Now</h3>
+                        <p>Please enter your details to book.</p>
+                    </div>
+                </div>
+                <form class="login-form" action="/booking" method="post">
+                    <input type="email" placeholder="Enter email address" name="email1" id ="email1" required />
+                    <button>login</button>
+                    <p class="message">Not registered? <a href="Register">Create an account</a></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

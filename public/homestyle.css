@@ -1,0 +1,83 @@
+/*Code By Jalen*/
+.div1 {
+    background-color: #cfcfcf;
+}
+.div2 {
+    border: 0px solid black;
+    height: 400px;
+    width: 100%;
+    background-color: #cfcfcf;
+    
+}
+
+.div3{
+    border: 0px solid black;
+    margin-left:100px;
+    height: 370px;
+    width: 500px;
+   display:inline-block;
+   margin-left:150px;
+
+}
+.div4 {
+    border: 0px solid red;
+    height: 300px;
+    width: 100%;
+    background-image: url('Image2.jpg');
+	background-size: 100% 130%;
+
+}
+
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+
+
+h1{
+	font-family: Helvetica;
+	font-size: 40px;
+	text-align: center;
+	
+}
+
+h2 {
+	font-family: Helvetica;
+	color: black;
+	font-size: 40px;
+	vertical-align: middle;
+	border-top-style: dashed;
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 50px;
+}
+h3{
+	font-size: 30px;
+}
+h4{
+	font-size: 20px;
+}
+
+
+table{
+	
+}
+td {
+	padding: 30px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 30px;
+	
+	
+}
+img {
+	width:50%;
+	height: 40%;
+	
+}
+div{
+	
+}

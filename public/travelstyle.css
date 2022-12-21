@@ -1,0 +1,90 @@
+/*Code by Jalen*/
+.div1 {
+    background-color: #cfcfcf;
+}
+.div2 {
+    border: 0px solid black;
+    height: 400px;
+    width: 100%;
+    background-color: #cfcfcf;
+    
+}
+
+.div3{
+    border: 0px solid black;
+    margin-left:100px;
+    height: 370px;
+    width: 500px;
+   display:inline-block;
+   margin-left:150px;
+
+}
+.div4 {
+    border: 0px solid red;
+    height: 300px;
+    width: 100%;
+    background-image: url('Image2.jpg');
+    background-size:100% 130%;
+
+}
+
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+h1{
+	font-size: 50px;
+	margin-left: 20px;
+}
+
+h2{
+	
+	font-size: 20px;
+	margin-left: 20px;
+	
+}
+h3{
+	font-size: 40px;
+	margin-left: 20px;
+}
+h4{
+	font-size: 20px;
+	margin-left: 20px;
+	margin-right: 100px:
+	}
+	
+img {
+	border: 8px solid;
+	border-radius: 50%;
+	border-color:#20B2AA;
+	padding: 4px;
+	margin-left: 50px;
+	
+	
+}

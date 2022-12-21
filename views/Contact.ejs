@@ -1,0 +1,149 @@
+
+<!--Code created by Manpreet Kaur Sidhu-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function ValidateForm() {
+                var name = document.getElementById("name");
+                var Email = document.getElementById("email");
+                var message = document.getElementById("message");
+                var validemail = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+                var email1 = validemail.test(Email.value);
+               // alert(email1);
+                if (name.value =="") {
+                    document.getElementById('errorname').innerHTML = "Please enter a valid name";
+                   name.focus();
+                    return false;
+                }
+                else {
+                    document.getElementById('errorname').innerHTML = "";
+                }
+                if (email.value == "") {
+                    document.getElementById('erroremail').innerHTML = "Please enter a valid email";
+                    email.focus();
+                    return false;
+                }
+                else {
+                    document.getElementById('erroremail').innerHTML = "";
+                }
+
+                if (email1 == false) {
+
+                    document.getElementById('erroremail').innerHTML = "Please enter a valid email with @ and .";
+                    email.focus();
+                    return false;
+                }
+          
+                if (message.value == "") {
+                    document.getElementById('errormsg').innerHTML = "Please enter a Message";
+                    message.focus();
+                    return false;
+                }
+                else {
+                   document.getElementById('errormsg').innerHTML = "";
+                }
+                alert("Thankyou for Submission, we will contact you as soon as possible.")
+            }
+       </script>
+    </head>
+    <body class="div1">
+        <ul>
+            <li><a class="active" href="Contact">Contact</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="VacationPackage">Packages</a></li>
+            <li><a href="travelabout.html">About</a></li>
+            <li><a href="Index.html">Home</a></li>
+            <li><a style="margin-right:64vw">Travel Agency</a></li>
+        </ul>
+        <div class="div4"></div>
+        <div class="div2">
+            <table><tr><td>
+                <div class="div3">
+                    <h2>Get in Touch</h2>
+                <p>Please fill a quick form and we will get in touch with you.</p>
+                    <form class="form-horizontal" action="" method="get">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="name">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                                <span class="error" id="errorname"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                <span class="error" id="erroremail"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Message">Message:</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="message" placeholder="Enter Message Here" name="Message"></textarea>
+                                <span class="error" id="errormsg"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="remember"> Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default" onclick="return ValidateForm()">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div> </td>
+               <td><div class="div3" style="padding:50px;margin-left:350px">
+                    <h4>Connect with us</h4>
+                    <p>For support or any questions.</p>
+                    <p>Email:Travelagency@gmail.com</p><br />
+                </div></td>
+            </table>
+          </div> 
+
+            <h2 class="h2"> List Of All the Agents with Contact Information</h2>
+
+            <table style="Margin-left:200px;padding:40px;width:80%;margin-bottom:50px;">
+            <th>Agent Name</th>
+            <th>Agent Phone Number</th>
+            <th>Agent Email Address</th>
+            <th> Agency Address</th>
+            <th>Agency Phone Number</th>
+             <%
+		            result.forEach((agentdetail)=>{ %>
+		      <tr>
+		        <td>
+		            <%= agentdetail.AgtFirstName %>
+                    <%= agentdetail.AgtLastName %>
+		        </td>
+                 <td >
+		            <%= agentdetail.AgtBusPhone %>
+                </td>
+                <td>
+                    <%= agentdetail.AgtEmail %>
+		        </td>
+                <td>
+		            <b><%= agentdetail.AgncyAddress %></b>
+		            </br><p>
+		            <%= agentdetail.AgncyCity %>
+		            <%= agentdetail.AgncyProv %>
+		            <%= agentdetail.AgncyPostal %>
+		        </td>
+                <td>
+                    <%= agentdetail.AgncyPhone %></td>
+		       </tr>
+		        <% }); %>
+               %>
+	        </table>
+       </div>
+    </body>
+</html>

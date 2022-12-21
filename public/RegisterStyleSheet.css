@@ -1,0 +1,35 @@
+
+/* Xavier, Threaded Project, Registration style sheet, 2022*/
+h1 {
+	font-family: Copperplate;
+	font-size: 20pt;
+	color: white;
+	text-align: center;
+	border: 0px solid blue;
+	
+}
+
+.font1 {
+	font-family: arial;
+	font-size: 15pt;
+	color: White;
+	text-align: left;
+	border: none;
+	margin-top:20px;
+	
+
+}
+.body1 {
+	
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("travel1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #333;
+}
+
+input{
+	margin-left: 80px;
+	position: fixed;
+	left: 200px;
+}
+

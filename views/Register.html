@@ -1,0 +1,210 @@
+<!--Xavier, Threaded Project, Registration page, 2022-->
+<!DOCTYPE html>
+<html>
+	<head> 
+
+		<title>Registration page</title>
+		<link href="reset.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="style.css">
+		<link href="RegisterStyleSheet.css" rel="stylesheet" type="text/css" />
+		<style>
+			p{
+				position: absolute;
+				float: right;
+				width: 40%;
+				right: 10px;
+				visibility: hidden;
+				color:yellow;
+				font-size:25px;
+			}
+		</style>
+		<script>
+			function validate(myform) {
+		
+				var CustFirstName = document.getElementById("CustFirstName");
+				if (CustFirstName.value == "") {
+					alert("First name must have a value");
+					CustFirstName.focus();
+					return false;
+				}
+				var CustLastName = document.getElementById("CustLastName");
+				if (CustLastName.value == "") {
+					alert("Last name must have a value");
+					CustLastName.focus();
+					return false;
+				}
+
+				var CustAddress = document.getElementById("CustAddress");
+				if (CustAddress.value == "") {
+					alert("Address must have a value");
+					CustAddress.focus();
+					return false;
+				}
+
+				var CustCity = document.getElementById("CustCity");
+				if (CustCity.value == "") {
+						alert("City must have a value");
+						CustCity.focus();
+						return false;
+					}
+
+				var CustProv = document.getElementById("CustProv");
+				if (CustProv.value == "") {
+					alert("Province must have a value");
+					CustProv.focus();
+					return false;
+				}
+
+				var CustCountry = document.getElementById("CustCountry");
+				if (CustCountry.value == "") {
+					alert("Country must have a value");
+					CustCountry.focus();
+					return false;
+				}
+
+				var CustPostal = document.getElementById("CustPostal");
+				if (CustPostal.value == "") {
+					alert("Postal code must have a value");
+					myform.CustPostal.focus();
+					return false;
+				}
+				else {
+					myform.CustPostal.value = myform.CustPostal.value.toUpperCase();
+					var reg = /^[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]/;
+					if (!reg.test(myform.CustPostal.value)) {
+						alert("Postal Code format must be'X9X 9X9'");
+						myform.CustPostal.focus();
+						return false;
+					}
+				}
+				
+				var CustHomePhone = document.getElementById("CustHomePhone");
+				if (CustHomePhone.value == "") {
+					alert("Home phone number must have a value");
+					CustHomePhone.focus();
+					return false;
+				}
+
+				var CustEmail = document.getElementById("CustEmail");
+				if (CustEmail.value == "") {
+					alert("Email must have a value");
+					CustEmail.focus();
+					return false;
+				}
+
+				var username = document.getElementById("username");
+				if (username.value == "") {
+					alert("Username must have a value");
+					username.focus();
+					return false;
+				}
+
+				var pwd = document.getElementById("pwd");
+				if (pwd.value == "") {
+					alert("Password must have a value");
+					pwd.focus();
+					return false;
+				}
+
+				confirm("Continue submitting?");
+                alert("Thank you for registering with Travel Experts!");
+                
+			} 
+
+				function showPara(paraId) {
+					document.getElementById(paraId).style.visibility = "visible";
+				}
+				function hidePara(paraId) {
+					document.getElementById(paraId).style.visibility = "hidden";
+				}
+			
+		</script>
+	</head>
+	<body class="body1">
+
+		<ul>
+			<li><a class="active" href="Contact">Contact</a></li>
+			<li><a href="Register.html">Register</a></li>
+			<li><a href="VacationPackage">Packages</a></li>
+			<li><a href="travelabout.html">About</a></li>
+			<li><a href="Index.html">Home</a></li>
+			<li><a style="margin-right:64vw">Travel Agency</a></li>
+		</ul>
+
+		<h1>Start your adventure at Travel Experts</h1>
+		<p id="fnameInfo">Enter your first name</p>
+		<p id="lnameInfo">Enter your last name</p>
+		<p id="addressInfo">Enter your street address</p>
+		<p id="cityInfo">Enter your City</p>
+		<p id="provinceInfo">Select your Province</p>
+		<p id="countryInfo">Select your Country</p>
+		<p id="postalcodeInfo">Enter your postal code</p>
+		<p id="emailInfo">Enter your home email address</p>
+		<p id="homePhoneInfo">Enter your home phone number</p>
+		<p id="businessPhoneInfo">Enter your business phone number</p>
+		<p id="usernameInfo">Enter your username</p>
+		<p id="passwordInfo">Enter your password</p>
+		
+			<form method="post" action="/Registration" class="font1">
+
+				<label for="CustFirstName">First name:</label>
+				<input type="text" id="CustFirstName" name="CustFirstName" onfocus="showPara('fnameInfo')" onblur="hidePara('fnameInfo')" /><br />
+				<br />
+
+				<label for="CustLastName">Last name:</label>
+				<input type="text" id="CustLastName" name="CustLastName" onfocus="showPara('lnameInfo')" onblur="hidePara('lnameInfo')" /><br />
+				<br />
+
+				<label for="CustAddress">Address:</label>
+				<input type="text" id="CustAddress" name="CustAddress" onfocus="showPara('addressInfo')" onblur="hidePara('addressInfo')" /><br />
+				<br />
+
+				<label for="CustCity">City:</label>
+				<input type="text" id="CustCity" name="CustCity" onfocus="showPara('cityInfo')" onblur="hidePara('cityInfo')" /><br />
+				<br />
+
+				<label for="CustProv">Province:</label>
+				<select style="margin-left:195px;width:165px" id="CustProv" name="CustProv" onfocus="showPara('provinceInfo')" onblur="hidePara('provinceInfo')" />
+					<option value="Alberta">AB</option>
+					<option value="British Columbia">BC</option>
+					<option value="Saskatchewan">SK</option>
+				</select><br />
+				<br />
+
+				<label for="CustCountry">Country:</label>
+				<select style="margin-left: 200px; width: 165px" id="CustCountry" name="CustCountry" onfocus="showPara('countryInfo')" onblur="hidePara('countryInfo')" /><br />
+					<option value="Canada">Canada</option>
+				</select><br />
+				<br />
+
+				<label for="CustPostal">Postal Code:</label>
+				<input type="text" id="CustPostal" name="CustPostal" onfocus="showPara('postalcodeInfo')" onblur="hidePara('postalcodeInfo')" /><br />
+				<br />
+
+				<label for="CustEmail">Email:</label>
+				<input type="email" id="CustEmail" name="CustEmail" onfocus="showPara('emailInfo')" onblur="hidePara('emailInfo')" /><br />
+				<br />
+
+				<label for="CustHomePhone">Home phone number:</label>
+				<input type="text" id="CustHomePhone" name="CustHomePhone" onfocus="showPara('homePhoneInfo')" onblur="hidePara('homePhoneInfo')" /><br />
+				<br />
+
+				<label for="CustBusPhone">Business phone number:</label>
+				<input type="text" id="CustBusPhone" name="CustBusPhone" onfocus="showPara('businessPhoneInfo')" onblur="hidePara('businessPhoneInfo')" /><br />
+				<br />
+
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" onfocus="showPara('usernameInfo')" onblur="hidePara('usernameInfo')" /><br />
+				<br />
+
+				<label for="pwd">Password:</label>
+				<input type="password" id="pwd" name="pwd" onfocus="showPara('passwordInfo')" onblur="hidePara('passwordInfo')" /><br />
+				<br />
+
+
+				<button type="submit" onclick="return validate(this.form)">Send</button>
+				<button type="reset" onclick="return confirm('Continue resetting?')">Reset</button>
+			</form>
+		
+	</body>
+</html>

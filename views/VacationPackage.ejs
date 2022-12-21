@@ -1,0 +1,68 @@
+<% /* %>
+Manpreet Kaur Sidhu
+<% */ %>
+<html>    
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body class="div1">
+        <ul>
+            <li><a class="active" href="Contact">Contact</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="VacationPackage">Packages</a></li>
+            <li><a href="travelabout.html">About</a></li>
+            <li><a href="Index.html">Home</a></li>
+            <li><a style="margin-right:64vw">Travel Agency</a></li>
+        </ul>
+            <h2 class="h2">DisCover a new Space with our special Packages</h2></br>
+
+            <div>
+          	    <table class="table1" >
+	                <th>Package Name</th>
+                    <th>StartDate</th>
+                    <th>EndDate</th>
+                    <th>Price</th>
+                    <th></th>
+                    <%
+		                result.forEach((desc)=>{ %>
+                    <tr>
+                    <td>
+		            <b><%= desc.PkgName %></b>
+		            </br><p>
+		            <%= desc.PkgDesc %></p>
+		            </td>
+                    <td style="color:red">
+		            <%= desc.PkgStartDate.toLocaleDateString() %>
+                     <%= desc.PkgStartDate.toLocaleTimeString() %>
+		            </td>
+                    <td>
+		            <%= desc.PkgEndDate.toLocaleDateString()  %>
+                    <%= desc.PkgEndDate.toLocaleTimeString() %>
+		            </td>
+                     <td>
+                     <td style="color:red">
+		            $<%= desc.PkgBasePrice %>
+		            </td>
+                     <td style="padding-left:20px">
+		             <input type="button" style="background-color:black;color:white;" onclick="window.location.href='Login.html';" value="Book" />
+		            </td>
+		            </tr>
+		            <% }); %>
+                     %>
+                </table>
+                <table style="border:0px solid black" >
+                    <tr>
+                        <%
+                        images.forEach(function(photo){%>
+                    <td>
+                        <img class="img2" src="<%=photo %>" /></td>
+                         <%
+                             });
+                          %>
+               </div>
+        </body>
+</html>
